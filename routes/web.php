@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/estudiantes/index', function () {
+    return view('index');
+});
+
+//Estudiantes
+Route::prefix('/estudiantes/')
+    ->namespace('Estudiantes\Configuracion')
+    ->group( function(){
+        
+        //estudiantes
+        Route::get('estudiantes','EstudiantesController@index');
+
+    });
