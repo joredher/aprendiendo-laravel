@@ -20,7 +20,7 @@ Route::get('/estudiantes/index', function () {
 });
 
 //Estudiantes
-Route::prefix('/estudiantes/')
+Route::prefix('/estudiantes')
     ->namespace('Estudiantes\Configuracion')
     ->group( function(){
         
