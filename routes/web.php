@@ -26,16 +26,14 @@ Route::get('/estudiantes/index', function () {
 });
 
 
-Route::group(['middleware' => 'auth'], function () {
+/*Route::group(['middleware' => 'auth']) function () {
     //Route::get('permisos/roles/', 'Basicos\Permisos\RolesController@showRoles');
     Route::post('/permisos/roles/getroles', ['middleware' => ['permission:show_rol'], 'uses' => 'Basicos\Permisos\RolesController@obtenerRolesPaginado']);
     Route::get('permisos/permisos/', 'Basicos\Permisos\PermisosController@showPermisos');
     Route::post('/permisos/permisos/getpermisos', ['middleware' => ['permission:show_permiso'], 'uses' => 'Basicos\Permisos\PermisosController@obtenerPermisosPaginado']);
+}*/
 
-
-}    //Estudiantes
-Route::prefix('/estudiantes')
-    ->namespace('Estudiantes\Configuracion')
+Route::prefix('estudiantes')->namespace('Estudiantes\Configuracion')
     ->group( function(){
         
         //estudiantes
